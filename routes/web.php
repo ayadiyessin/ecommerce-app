@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/cat', function () { // /cat hya el route (lien ) mta page 
+    return view('categorie'); // lezem na3mel page fi views nsamiha categorie.blade.php
+});
