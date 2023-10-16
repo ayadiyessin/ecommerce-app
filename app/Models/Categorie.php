@@ -10,6 +10,11 @@ class Categorie extends Model
     use HasFactory;
     protected $fillable = [
         'nomcategorie','imagecategorie'
-    ]; // chnouma les champ eli bech yatihom utilisateur yani eli bech i3amarhom utilisateur 
+    ]; // chnouma les champ eli bech yatihom utilisateur yani eli bech i3amarhom utilisateur
+    public function scategories()
+    {
+        return $this->hasMany(Scategorie::class ,"categorieID"); //une categorie contien plusieur sous categorie 
+    }
+
 
 }
