@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/***********************************hethaaa ll vue js ***************************************** */
 
-Route::get('/cat', function () { // /cat hya el route (lien ) mta page 
-    return view('categorie'); // lezem na3mel page fi views nsamiha categorie.blade.php
-});
+Route::get('/{any}', function () { // ay route tjini  bech nbathek ll vews/layout/app.bleade.php
+    return view('layout.app'); //nmchyou ta7t l vue  w nsn3ou repertoire layoutr w tahtou fichier app.blade.php
+    })->where('any', '.*'); // ay composent bech n7otouwah fi vews/layout/app.bleade.php == layout.app
+//=> hethy zedaa t9oli chnia awel page nlansi menha projet
+    // spa yani kolchy y sirlou l execution dans une seul page
